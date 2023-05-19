@@ -4,7 +4,9 @@ Lightning-CLI is a powerful framework for training neural networks with pytorch.
 It considerably reduces the need for a boilerplate code.
 Lightning-CLI implement a configurable command line tool for pytorch-lightning. It allows you to control the training parameters (learning rate, batch size, optimizer, number of GPUs...) either with config files or with the command line.
 
-This code do not cover the full set of functionality of LightningCli. For more details, have a read at the official documentation: https://pytorch-lightning.readthedocs.io/en/1.6.2/common/lightning_cli.html
+This code do not cover the full set of functionality of LightningCli. For more details, have a read at the official documentation: 
+- https://lightning.ai/docs/pytorch/stable/ (pytorch-lightning)
+- https://lightning.ai/docs/pytorch/stable/cli/lightning_cli.html (pytorch-lightning CLI)
 
 ## Installation
 pytorch-lightning library is needed  to run this code. 
@@ -12,7 +14,7 @@ You can install it in a virtual environment as follows:
 ```
 python3 -m venv env
 source env/bin/activate
-pip install pytorch-lightning[extra] torchvision
+pip install pytorch-lightning[extra]==2.0.2 torchvision==0.15.2
 ```
 
 <!-- ## Visualizing the available arguments
