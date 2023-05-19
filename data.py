@@ -5,7 +5,7 @@ from torchvision.datasets import MNIST
 from torchvision import transforms
 
 class MNISTDataModule(pl.LightningDataModule):
-    def __init__(self, data_dir: str = "path/to/dir", batch_size: int = 32):
+    def __init__(self, data_dir: str = "datasets", batch_size: int = 32):
         super().__init__()
         self.data_dir = data_dir
         self.batch_size = batch_size

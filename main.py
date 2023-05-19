@@ -6,13 +6,14 @@ from pytorch_lightning.callbacks import Callback
 # simple demo classes for your convenience
 from data import MNISTDataModule
 
-class MyModel(pl.LightningModule):
+class MnistModel(pl.LightningModule):
     """
     .. warning::  This is meant for testing/debugging and is experimental.
     """
 
     def __init__(self, network: torch.nn.Module, learning_rate: float = 0.02):
         super().__init__()
+        self.save_hyperparameters()
         self.net = network
         self.learning_rate = learning_rate
         self.loss = torch.nn.BCELoss()
@@ -46,7 +47,7 @@ class MyModel(pl.LightningModule):
 
 
 def cli_main():
-    cli = LightningCLI(MyModel)
+    cli = LightningCLI(MnistModel, run=True)
 
 
 if __name__ == "__main__":

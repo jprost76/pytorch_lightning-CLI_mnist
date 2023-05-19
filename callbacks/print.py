@@ -12,6 +12,3 @@ class MyPrintingCallback(Callback):
 
     def on_train_end(self, trainer, pl_module):
         print("Training is ending")
-
-    def on_train_epoch_start(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
-        print("hello from custom callback")
