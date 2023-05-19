@@ -1,10 +1,7 @@
 import torch
 import pytorch_lightning as pl
-from pytorch_lightning.cli import LightningCLI#, 
-#from pytorch_lightning.utilities import CALLBACK_REGISTRY
-from pytorch_lightning.callbacks import Callback
-# simple demo classes for your convenience
-from data import MNISTDataModule
+from pytorch_lightning.cli import LightningCLI
+
 
 class MnistModel(pl.LightningModule):
     """
