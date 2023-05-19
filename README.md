@@ -1,19 +1,18 @@
 # Pytorch-lightning cli MNIST example
-This repository provides a simple example on how to use pytorch-lighning CLI to train a classifier on MNIST dataset.
+This repository provides a simple example on how to use pytorch-lighning CLI interface to train a classifier on MNIST dataset.
 Lightning-CLI is a powerful framework for training neural networks with pytorch. 
 It considerably reduces the need for a boilerplate code.
-Lightning-CLI implement a configurable command line tool for pytorch-lightning. It allows you to control the training parameters (learning rate, batch size, optimizer, number of GPU...) either with config files or with the command line.
+Lightning-CLI implement a configurable command line tool for pytorch-lightning. It allows you to control the training parameters (learning rate, batch size, optimizer, number of GPUs...) either with config files or with the command line.
 
 This code do not cover the full set of functionality of LightningCli. For more details, have a read at the official documentation: https://pytorch-lightning.readthedocs.io/en/1.6.2/common/lightning_cli.html
 
 ## Installation
-Pytorch lightning CLI library is needed  to run this code. 
-You can install it in a virtual environment as follow:
+pytorch-lightning library is needed  to run this code. 
+You can install it in a virtual environment as follows:
 ```
 python3 -m venv env
 source env/bin/activate
-pip install pytorch-lightning[extra]
-pip install torchvision
+pip install pytorch-lightning[extra] torchvision
 ```
 
 <!-- ## Visualizing the available arguments
@@ -37,7 +36,7 @@ Have look in config/defaults.yaml for an example of config file.
 python main.py -c config/default.yaml fit
 ```
  Config file argument can be overwritten by using flag in the command line.
- For instance, to change the batch size and the number of gpus, run
+ For instance, to change the batch size and the number of gpus, run:
 
 ```
 python main.py -c config/default.yaml fit --trainer.gpus 2 --data.batch_size 16
